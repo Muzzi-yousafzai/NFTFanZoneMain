@@ -1,2 +1,2 @@
-# NFTFanZoneMain
- ARBased
+# NFTFanZone
+ NFT Fan Zone App
