@@ -20,18 +20,17 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [Tooltip("Instantiates this prefab on a plane at the touch location.")]
         GameObject m_PlacedPrefab;
         public UnityEvent onContentPlaced;
-        private int CurrentIndex;
         public GameObject[] Prefabs;
         bool CanAugment;
-
+        private int NewIndex;
         /// <summary>
         /// The prefab to instantiate on touch.
         /// </summary>
-        public GameObject placedPrefab
-        {
-            get { return m_PlacedPrefab; }
-            set { m_PlacedPrefab = value; }
-        }
+     //   public GameObject placedPrefab
+       // {
+           // get { return m_PlacedPrefab; }
+         //   set { m_PlacedPrefab = value; }
+      //  }
 
         /// <summary>
         /// The object instantiated as a result of a successful raycast intersection with a plane.
@@ -45,8 +44,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         public void SelectModel(int index)
         {
+            NewIndex = index;
             spawnedObject.GetComponent<ModelSwitchController>().SelectModel(index);
-            PlayerPrefs.SetInt("CurrentIndex", index);
+         
         }
 
         bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -81,9 +81,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 // will be the closest hit.
                 var hitPose = s_Hits[0].pose;
                 
-                if (CanAugment=true)
+                
                 {
-                    spawnedObject = Instantiate(Prefabs[PlayerPrefs.GetInt("CurrentIndex")], hitPose.position, hitPose.rotation);
+                    spawnedObject = Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
                     onContentPlaced.Invoke();
                     Handheld.Vibrate();
                     gameObject.GetComponent<ARPlaneManager>().enabled = false;

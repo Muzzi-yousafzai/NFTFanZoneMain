@@ -19,6 +19,6 @@ public class ModelSwitchController : MonoBehaviour
         }
 
         models[index].SetActive(true);
-        PlayerPrefs.SetInt("CurrentIndex", index);
+       
     }
 }

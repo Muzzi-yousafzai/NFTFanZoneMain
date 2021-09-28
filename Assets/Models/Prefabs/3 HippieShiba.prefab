@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9000600357501641623}
   m_Layer: 0
-  m_Name: HippieShiba
+  m_Name: 3 HippieShiba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

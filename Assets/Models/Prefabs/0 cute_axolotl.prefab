@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7021689504484273188}
   m_Layer: 0
-  m_Name: cute_axolotl
+  m_Name: 0 cute_axolotl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
