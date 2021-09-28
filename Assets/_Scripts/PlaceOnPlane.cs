@@ -23,14 +23,16 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public GameObject[] Prefabs;
         bool CanAugment;
         private int NewIndex;
+        private int placedPrefabCount;
+        private int maxPrefabSpwanCount = 20;
         /// <summary>
         /// The prefab to instantiate on touch.
         /// </summary>
-     //   public GameObject placedPrefab
-       // {
-           // get { return m_PlacedPrefab; }
-         //   set { m_PlacedPrefab = value; }
-      //  }
+        //   public GameObject placedPrefab
+        // {
+        // get { return m_PlacedPrefab; }
+        //   set { m_PlacedPrefab = value; }
+        //  }
 
         /// <summary>
         /// The object instantiated as a result of a successful raycast intersection with a plane.
@@ -81,13 +83,16 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 // will be the closest hit.
                 var hitPose = s_Hits[0].pose;
                 
-                
+                if(placedPrefabCount < maxPrefabSpwanCount)
                 {
                     spawnedObject = Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
                     onContentPlaced.Invoke();
                     Handheld.Vibrate();
+                    placedPrefabCount++;
                     gameObject.GetComponent<ARPlaneManager>().enabled = false;
                 }
+               
+                
                 //else
                 //{
                 //    spawnedObject.transform.position = hitPose.position;
