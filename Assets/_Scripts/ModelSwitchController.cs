@@ -5,7 +5,7 @@ using UnityEngine;
 public class ModelSwitchController : MonoBehaviour
 {
     public GameObject[] models;
-    public int _currentindex;
+    
 
     private void Start()
     {
@@ -18,9 +18,9 @@ public class ModelSwitchController : MonoBehaviour
         {
             model.SetActive(false);
         }
-
+        Debug.Log("index = " + index);
         models[index].SetActive(true);
-        _currentindex = index;
+        PlayerPrefs.SetInt("CurrentIndex", index);
        
     }
 }

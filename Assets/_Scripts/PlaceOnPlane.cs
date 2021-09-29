@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-
+using UnityEngine.UI;
 namespace UnityEngine.XR.ARFoundation.Samples
 {
     /// <summary>
@@ -18,10 +18,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
     {
         [SerializeField]
         [Tooltip("Instantiates this prefab on a plane at the touch location.")]
-        GameObject m_PlacedPrefab;
+        GameObject m_PlacedPrefabs;
         public UnityEvent onContentPlaced;
         public GameObject[] Prefabs;
-        bool CanAugment;
+
+        public Text debugLog;
+        bool canAugment=false;
+        public Animator animator;
+
         private int NewIndex;
         private int placedPrefabCount;
         private int maxPrefabSpwanCount = 20;
@@ -47,10 +51,16 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public void SelectModel(int index)
         {
             NewIndex = index;
-            spawnedObject.GetComponent<ModelSwitchController>().SelectModel(index);
-         
+           
+            debugLog.text = "Tap to place new Model!";
+            animator.SetTrigger("Down");
+            Invoke(nameof(TurnAugmentation), 1.0f);
         }
+        void TurnAugmentation()
+        {
+            canAugment = true;
 
+        }
         bool TryGetTouchPosition(out Vector2 touchPosition)
         {
     #if UNITY_EDITOR
@@ -83,13 +93,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 // will be the closest hit.
                 var hitPose = s_Hits[0].pose;
                 
-                if(placedPrefabCount < maxPrefabSpwanCount)
+                if(canAugment)
                 {
-                    spawnedObject = Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
+                    Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
                     onContentPlaced.Invoke();
                     Handheld.Vibrate();
-                    placedPrefabCount++;
-                    gameObject.GetComponent<ARPlaneManager>().enabled = false;
+                    canAugment = false;
+                    debugLog.text = "Select Model!";
+                    //placedPrefabCount++;
+                    // gameObject.GetComponent<ARPlaneManager>().enabled = false;
                 }
                
                 
