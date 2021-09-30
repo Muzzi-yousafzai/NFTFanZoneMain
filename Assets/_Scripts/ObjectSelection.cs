@@ -15,6 +15,12 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
         gameObject.GetComponent<LeanDragTranslate>().enabled = false;
+        GameObject[] objs;
+        objs = GameObject.FindGameObjectsWithTag("Target");
+        foreach (GameObject model in objs)
+        {
+            model.transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
     private void OnMouseUp()
     {
