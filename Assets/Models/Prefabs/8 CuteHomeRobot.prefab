@@ -33,7 +33,7 @@ GameObject:
   - component: {fileID: -6583949680576370009}
   - component: {fileID: -7730489972128916176}
   - component: {fileID: -8097943073657329617}
-  - component: {fileID: 553532559403331666}
+  - component: {fileID: 7307982026717628079}
   m_Layer: 0
   m_Name: 8 CuteHomeRobot
   m_TagString: Target
@@ -83,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ring: {fileID: 8497249730097726984}
+  Prefabs: []
 --- !u!114 &-6583949680576370009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
   Dampening: -1
   Inertia: 0
   remainingTranslation: {x: 0, y: 0, z: 0}
---- !u!114 &553532559403331666
+--- !u!114 &7307982026717628079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7998559617448222822}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d72cc6210cb7144a24acb7402222a6, type: 3}
+  m_Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Use:
@@ -173,11 +174,9 @@ MonoBehaviour:
     RequiredFingerCount: 0
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
-  Camera: {fileID: 0}
-  Relative: 0
-  Dampening: -1
-  remainingTranslation: {x: 0, y: 0, z: 0}
-  remainingRotation: {x: 0, y: 0, z: 0, w: 1}
+  Axis: {x: 0, y: -1, z: 0}
+  Space: 1
+  Sensitivity: 1
 --- !u!1001 &3927412738852399101
 PrefabInstance:
   m_ObjectHideFlags: 0
