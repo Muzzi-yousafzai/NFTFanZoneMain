@@ -10,7 +10,6 @@ public class ObjectSelection : MonoBehaviour
     public GameObject[] Prefabs;
     private void Awake()
     {
-        
         gameObject.GetComponent<LeanTouch>().enabled = false;
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
