@@ -33,7 +33,6 @@ public class ImageCapture : MonoBehaviour
 		Destroy(ss);
 
 		Canvas.SetActive(true);
-		
 
 
 		new NativeShare().AddFile(filePath)

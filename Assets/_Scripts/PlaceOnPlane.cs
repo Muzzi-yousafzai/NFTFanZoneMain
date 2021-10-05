@@ -21,11 +21,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         GameObject m_PlacedPrefabs;
         public UnityEvent onContentPlaced;
         public GameObject[] Prefabs;
-
         public Text debugLog;
         bool canAugment=false;
         public Animator animator;
-
         private int NewIndex;
         private int placedPrefabCount;
         private int maxPrefabSpwanCount = 20;
