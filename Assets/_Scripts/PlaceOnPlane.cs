@@ -28,8 +28,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
         private int placedPrefabCount;
         private int maxPrefabSpwanCount = 20;
         public GameObject Featheredplane;
+        public GameObject EnableTrackingButton;
+        public GameObject DisableTrackingButton;
 
-      public  ARPlaneManager m_ARPlaneManager;
+
+        public ARPlaneManager m_ARPlaneManager;
         /// <summary>
         /// The prefab to instantiate on touch.
         /// </summary>
@@ -42,6 +45,23 @@ namespace UnityEngine.XR.ARFoundation.Samples
         /// <summary>
         /// The object instantiated as a result of a successful raycast intersection with a plane.
         /// </summary>
+        /// 
+        public void EnableTracking()
+        {
+            foreach (var plane in m_ARPlaneManager.trackables)
+                plane.gameObject.SetActive(true);
+            EnableTrackingButton.SetActive(false);
+            DisableTrackingButton.SetActive(true);
+        }
+        public void DisbleTracking()
+        {
+            foreach (var plane in m_ARPlaneManager.trackables)
+                plane.gameObject.SetActive(false);
+            DisableTrackingButton.SetActive(false);
+            EnableTrackingButton.SetActive(true);
+            
+        }
+
         public GameObject spawnedObject { get; private set; }
 
         void Awake()
@@ -104,8 +124,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     debugLog.text = "Select Model!";
                     //placedPrefabCount++;
                     //  gameObject.GetComponent<ARPlaneManager>().enabled = false;
-                    foreach (var plane in m_ARPlaneManager.trackables)
-                        plane.gameObject.SetActive(false);
+                   
                 }
                
                 
