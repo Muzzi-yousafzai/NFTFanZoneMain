@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\2021.1.20f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/EuphoriaXR/OneDrive/Desktop/Unity Projects/NFTFanZoneMain
+D:/Unity Projects/NFTFanZoneMain
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55797
-Successfully changed project path to: C:/Users/EuphoriaXR/OneDrive/Desktop/Unity Projects/NFTFanZoneMain
-C:/Users/EuphoriaXR/OneDrive/Desktop/Unity Projects/NFTFanZoneMain
+64907
+Successfully changed project path to: D:/Unity Projects/NFTFanZoneMain
+D:/Unity Projects/NFTFanZoneMain
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 202.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 98.87 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.20f1 (be552157821d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.20f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/EuphoriaXR/OneDrive/Desktop/Unity Projects/NFTFanZoneMain/Assets
+[Subsystems] Discovering subsystems at path D:/Unity Projects/NFTFanZoneMain/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56904
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005452 seconds.
+Registered in 0.009904 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 167.17 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 110.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  6.333 seconds
+- Completed reload, in  4.937 seconds
 Domain Reload Profiling:
-	ReloadAssembly (6333ms)
-		BeginReloadAssembly (228ms)
+	ReloadAssembly (4937ms)
+		BeginReloadAssembly (182ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (1664ms)
-			LoadAssemblies (220ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1181ms)
+			LoadAssemblies (177ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (692ms)
+			SetupTypeCache (512ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (110ms)
-			SetupLoadedEditorAssemblies (665ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (459ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (167ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (111ms)
 				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (357ms)
-				ProcessInitializeOnLoadMethodAttributes (118ms)
+				ProcessInitializeOnLoadAttributes (253ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.015706 seconds.
+Registered in 0.005493 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 188.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 109.37 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.894 seconds
+- Completed reload, in  2.938 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3895ms)
-		BeginReloadAssembly (653ms)
+	ReloadAssembly (2940ms)
+		BeginReloadAssembly (405ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (20ms)
+			DisableScriptedObjects (12ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (52ms)
-		EndReloadAssembly (2975ms)
-			LoadAssemblies (338ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (2360ms)
+			LoadAssemblies (242ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1012ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (205ms)
-			SetupLoadedEditorAssemblies (1165ms)
+			SetupTypeCache (730ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (118ms)
+			SetupLoadedEditorAssemblies (1017ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (189ms)
-				BeforeProcessingInitializeOnLoad (258ms)
-				ProcessInitializeOnLoadAttributes (668ms)
-				ProcessInitializeOnLoadMethodAttributes (14ms)
-				AfterProcessingInitializeOnLoad (22ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (110ms)
+				BeforeProcessingInitializeOnLoad (191ms)
+				ProcessInitializeOnLoadAttributes (674ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (19ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
-Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
+Refreshing native plugins compatible for Editor in 1.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2158 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 92.2 MB.
 System memory in use after: 92.3 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2600.
-Total: 7.952200 ms (FindLiveObjects: 0.513200 ms CreateObjectMapping: 0.184000 ms MarkObjects: 7.146000 ms  DeleteObjects: 0.106800 ms)
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2599.
+Total: 7.203600 ms (FindLiveObjects: 0.502000 ms CreateObjectMapping: 0.298500 ms MarkObjects: 6.277000 ms  DeleteObjects: 0.123200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,295 +131,13 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Models/Prefabs/doggy V002.fbx
-  artifactKey: Guid(25001f123b1643541b6e64c93ca3607a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/doggy V002.fbx using Guid(25001f123b1643541b6e64c93ca3607a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ef494eca4ca00a4e91af16ae3805d6') in 0.801441 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 16.470386 seconds.
-  path: Assets/Models/Prefabs/doggy V002.fbx
-  artifactKey: Guid(25001f123b1643541b6e64c93ca3607a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/doggy V002.fbx using Guid(25001f123b1643541b6e64c93ca3607a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a24937ddfab82bd22576307fa9d4648') in 0.661389 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.778711 seconds.
   path: Assets/Models/Prefabs/Doggy.prefab
   artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b7f1f55bd8cbec0f936228d618b90ba') in 0.286969 seconds 
+Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b257bf9b1d386e06792b3f7149d31531') in 0.695757 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 25.740045 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c996a74cafa8beba02e78bc644310181') in 0.240090 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.544612 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4b02748a674f4c1e13c54cb28239d3') in 0.315200 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.591237 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '657161f9deb73a81fc053e4e1cb3fa1d') in 0.243463 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.910020 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db78f6ea11d650db15fb266b62f762ae') in 0.389343 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.495334 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7822af8bde7b83c0b250ca2f7c605ddc') in 0.312224 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.332148 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '935afbea00092f2ba60f830bda06d8eb') in 0.248216 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.960534 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a021b4f2ad96de59e774b7c936fc4e72') in 0.403851 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.701528 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2fff70c3c0daee9aa6c140e40a1e911') in 0.250513 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.612302 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c78a34b8d7d85b9edbab7625e6a38f1') in 0.282309 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.679496 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ddae5cd298f4d3063bb0a974c5dc023') in 0.238044 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.511230 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1402a19fdb84414d0c2973e6613d023') in 0.348843 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.486414 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9779cb07a7ad5c3e2ceedd57fd698e99') in 0.182249 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.751542 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0dd3e1044517d6833a2f541312161c1') in 0.181822 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 25.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 52.9 MB.
-System memory in use after: 53.0 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2643.
-Total: 11.232000 ms (FindLiveObjects: 0.619900 ms CreateObjectMapping: 0.336400 ms MarkObjects: 10.219600 ms  DeleteObjects: 0.052500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 404.443098 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2119e92a24c783e175c86337b935bc23') in 0.368153 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.020398 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23d3d0d0994a5e0e1c3a5143e4641d10') in 0.289482 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.633930 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54da5ea7ae234e71559ff99f3c69e3c7') in 0.280649 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.791950 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068d111904469901df058c1e9899a75b') in 0.513858 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.638398 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6410fb13f228cb05896c0539a8f5bfe9') in 0.307072 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.946060 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9264dd2d5a4017b4b148a255215b7722') in 0.310940 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.733308 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c76442147871fac86b2b2cc7d9254d1e') in 0.393356 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 141.004116 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac91c7de761bb9419c0d0a8365d99ee8') in 0.314055 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.376784 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20db0f64c74b0bcef6935b4405eb029b') in 0.228878 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.714738 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2ef68a322b6436bc0a33926a8159138') in 0.252087 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 37.32 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 52.6 MB.
-System memory in use after: 52.8 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2643.
-Total: 45.458400 ms (FindLiveObjects: 0.587700 ms CreateObjectMapping: 0.300300 ms MarkObjects: 44.490800 ms  DeleteObjects: 0.076300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 298.394857 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92b3586ddf031f6f444538f3ac61c12a') in 0.299992 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.859365 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6384dd2556d9ca605436bd5dc9b579af') in 0.394442 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.675762 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e695395332957ef651118a7fbe0afa9') in 0.391942 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.493792 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b91d16189f619b24ec79779950880404') in 0.219156 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.553279 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5a07bd4d1c5df9028e21828c6c777c4') in 0.455327 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.096232 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0be6aee46682035011a6809b15c9ad5') in 0.322695 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 27.721837 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33aad47efeaec3429dfa45c1ec4ef6ce') in 0.391969 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.480552 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90cc4bb6f4e5b4b8078068dc47a39faf') in 0.299120 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 21.216889 seconds.
-  path: Assets/Models/Prefabs/Doggy.prefab
-  artifactKey: Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Prefabs/Doggy.prefab using Guid(8c1e7fa6bcd833d4186cc6583cb0729e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40dac9f10e751eca9dd0200c61594f19') in 0.283968 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 25.83 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 52.7 MB.
-System memory in use after: 52.8 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2643.
-Total: 13.486900 ms (FindLiveObjects: 0.426700 ms CreateObjectMapping: 0.294000 ms MarkObjects: 12.695100 ms  DeleteObjects: 0.068000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 17.00 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 52.7 MB.
-System memory in use after: 52.8 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2643.
-Total: 6.235100 ms (FindLiveObjects: 0.392300 ms CreateObjectMapping: 0.174200 ms MarkObjects: 5.630900 ms  DeleteObjects: 0.035600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 29.696679 seconds.
+  path: Assets/Cat 01 (1).png
+  artifactKey: Guid(15d22cd1bf645e64f834271059fab979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cat 01 (1).png using Guid(15d22cd1bf645e64f834271059fab979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50861179540d39556883be950381efc') in 0.150681 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

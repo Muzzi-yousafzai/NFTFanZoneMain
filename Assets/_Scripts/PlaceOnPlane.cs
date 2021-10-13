@@ -27,6 +27,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         private int NewIndex;
         private int placedPrefabCount;
         private int maxPrefabSpwanCount = 20;
+        public GameObject Featheredplane;
+
+      public  ARPlaneManager m_ARPlaneManager;
         /// <summary>
         /// The prefab to instantiate on touch.
         /// </summary>
@@ -44,6 +47,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         void Awake()
         {
             m_RaycastManager = GetComponent<ARRaycastManager>();
+            m_ARPlaneManager = GetComponent<ARPlaneManager>();
         }
 
         public void SelectModel(int index)
@@ -99,7 +103,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     canAugment = false;
                     debugLog.text = "Select Model!";
                     //placedPrefabCount++;
-                    // gameObject.GetComponent<ARPlaneManager>().enabled = false;
+                    //  gameObject.GetComponent<ARPlaneManager>().enabled = false;
+                    foreach (var plane in m_ARPlaneManager.trackables)
+                        plane.gameObject.SetActive(false);
                 }
                
                 
