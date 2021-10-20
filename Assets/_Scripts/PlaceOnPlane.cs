@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
+using Siccity.GLTFUtility;
 namespace UnityEngine.XR.ARFoundation.Samples
 {
     /// <summary>
@@ -30,6 +31,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public GameObject Featheredplane;
         public GameObject EnableTrackingButton;
         public GameObject DisableTrackingButton;
+        public ModelLoader ModelLoader;
 
 
         public ARPlaneManager m_ARPlaneManager;
@@ -73,7 +75,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public void SelectModel(int index)
         {
             NewIndex = index;
-           
+            ModelLoader.LoadModel();
+            Prefabs[NewIndex] = ModelLoader.result;
             debugLog.text = "Tap to place new Model!";
             animator.SetTrigger("Down");
             Invoke(nameof(TurnAugmentation), 1.0f);
