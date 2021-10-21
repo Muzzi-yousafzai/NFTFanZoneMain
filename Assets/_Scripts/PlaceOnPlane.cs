@@ -33,6 +33,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public GameObject EnableTrackingButton;
         public GameObject DisableTrackingButton;
         public ModelLoader ModelLoader;
+        public GameObject _Ring;
 
 
         public ARPlaneManager m_ARPlaneManager;
@@ -122,12 +123,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 
                 if(canAugment)
                 {
-                    Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
+                   Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
+                    Prefabs[NewIndex].SetActive(true);
                     onContentPlaced.Invoke();
                     Handheld.Vibrate();
                     canAugment = false;
                     debugLog.text = "Select Model!";
                     TakeImageButton.SetActive(true);
+                    
                     //placedPrefabCount++;
                     //  gameObject.GetComponent<ARPlaneManager>().enabled = false;
                    

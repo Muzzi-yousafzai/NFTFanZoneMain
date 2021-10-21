@@ -17,6 +17,7 @@ public class ModelDownloader : MonoBehaviour
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         localURL = string.Format("{0}/{1}.glb", Application.persistentDataPath, "Poodle"); ;
+        print(localURL);
     }
     private void Update()
     {
@@ -64,6 +65,7 @@ public class ModelDownloader : MonoBehaviour
         while (!request.isDone)
         {
             loadingProgress.text = "" + (request.downloadProgress*100).ToString("F0")+ "%";
+            print(loadingProgress);
             yield return null;
         }
     }

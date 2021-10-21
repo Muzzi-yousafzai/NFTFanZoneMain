@@ -3419,6 +3419,7 @@ MonoBehaviour:
   EnableTrackingButton: {fileID: 1538576115}
   DisableTrackingButton: {fileID: 926730803}
   ModelLoader: {fileID: 1389558828}
+  _Ring: {fileID: -9153980248199252776, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
   m_ARPlaneManager: {fileID: 1335839537}
 --- !u!114 &1335839537
 MonoBehaviour:
@@ -3506,10 +3507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257f35e85ff8ee441946d55d903a990d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filepath: 
   ModelDownloader: {fileID: 1389558826}
   result: {fileID: 7689185715813486663, guid: 00a0af50298e643708787f770f1d44b2, type: 3}
-  Ring: {fileID: 4858454395545084405, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
+  Ring: {fileID: -9153980248199252776, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
 --- !u!1 &1425487971
 GameObject:
   m_ObjectHideFlags: 0
