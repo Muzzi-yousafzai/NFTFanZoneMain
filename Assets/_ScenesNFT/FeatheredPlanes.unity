@@ -3413,6 +3413,7 @@ MonoBehaviour:
   - {fileID: 1197001600639784410, guid: 2f55a4558989748b59f53287b6fbe045, type: 3}
   debugLog: {fileID: 1171768690}
   animator: {fileID: 1265979906}
+  TakeImageButton: {fileID: 1607766996}
   Featheredplane: {fileID: 1585201990951412, guid: d16dd8da7e4ccbe42b1b4a344a72ecbb,
     type: 3}
   EnableTrackingButton: {fileID: 1538576115}

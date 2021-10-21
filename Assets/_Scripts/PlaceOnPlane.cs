@@ -28,6 +28,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         private int NewIndex;
         private int placedPrefabCount;
         private int maxPrefabSpwanCount = 20;
+        public GameObject TakeImageButton;
         public GameObject Featheredplane;
         public GameObject EnableTrackingButton;
         public GameObject DisableTrackingButton;
@@ -80,6 +81,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             debugLog.text = "Tap to place new Model!";
             animator.SetTrigger("Down");
             Invoke(nameof(TurnAugmentation), 1.0f);
+            TakeImageButton.SetActive(false);
         }
         void TurnAugmentation()
         {
@@ -125,6 +127,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     Handheld.Vibrate();
                     canAugment = false;
                     debugLog.text = "Select Model!";
+                    TakeImageButton.SetActive(true);
                     //placedPrefabCount++;
                     //  gameObject.GetComponent<ARPlaneManager>().enabled = false;
                    
