@@ -34,8 +34,8 @@ MonoBehaviour:
     - NativeShare.Runtime
     - Siccity.GLTFUtility
     - Dracodec
-    - NativeShare.Editor
     - Siccity.GLTFUtility.Editor
+    - NativeShare.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

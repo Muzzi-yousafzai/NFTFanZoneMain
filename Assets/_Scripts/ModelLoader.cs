@@ -12,13 +12,21 @@ public class ModelLoader : MonoBehaviour
     public ModelDownloader ModelDownloader;
     public GameObject result;
     public GameObject Ring;
-    // Start is called before the first frame update
 
-    void Start()
+
+  /* private void Awake()
     {
-
-    }
-
+        result.GetComponent<LeanTouch>().enabled = false;
+        result.GetComponent<LeanPinchScale>().enabled = false;
+        result.GetComponent<LeanTwistRotateAxis>().enabled = false;
+        result.GetComponent<LeanDragTranslate>().enabled = false;
+        GameObject[] objs;
+        objs = GameObject.FindGameObjectsWithTag("Target");
+        foreach (GameObject model in objs)
+        {
+            model.transform.GetChild(0).gameObject.SetActive(false);
+        }
+    }*/
     // Update is called once per frame
     void Update()
     {
@@ -52,22 +60,11 @@ public class ModelLoader : MonoBehaviour
         result.AddComponent<LeanDragTranslate>();
         result.gameObject.tag = "Target";
         result.GetComponentInChildren<Camera>().enabled = false;
-      result =  Instantiate(Ring, Vector3.zero, Quaternion.identity);
-        result.transform.SetParent(Ring.transform);
+        GameObject newRing = Instantiate(Ring, Vector3.zero, Quaternion.identity) as GameObject;
+        newRing.transform.parent = result.transform;
+        result.SetActive(false);
     }
-    private void Awake()
-    {
-        result.GetComponent<LeanTouch>().enabled = false;
-        result.GetComponent<LeanPinchScale>().enabled = false;
-        result.GetComponent<LeanTwistRotateAxis>().enabled = false;
-        result.GetComponent<LeanDragTranslate>().enabled = false;
-        GameObject[] objs;
-        objs = GameObject.FindGameObjectsWithTag("Target");
-        foreach (GameObject model in objs)
-        {
-            model.transform.GetChild(0).gameObject.SetActive(false);
-        }
-    }
+    
     private void OnMouseUp()
     {
         result.GetComponent<LeanTouch>().enabled = false;
