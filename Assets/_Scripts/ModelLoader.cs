@@ -12,7 +12,18 @@ public class ModelLoader : MonoBehaviour
     public ModelDownloader ModelDownloader;
     public GameObject result;
     public GameObject Ring;
+    public GameObject newRing;
 
+    public static ModelLoader Instance = null;
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+
+        Instance = this;
+    }
     private void ImportGLTF()
     {
 
@@ -25,9 +36,10 @@ public class ModelLoader : MonoBehaviour
         result.AddComponent<ObjectSelection>();
         result.gameObject.tag = "Target";
         result.GetComponentInChildren<Camera>().enabled = false;
-        GameObject newRing = Instantiate(Ring, Vector3.zero, Quaternion.identity) as GameObject;
+        newRing = Instantiate(Ring, Vector3.zero, Quaternion.identity);
         newRing.transform.parent = result.transform;
-        //result.SetActive(false);
+        result.SetActive(false);
+        newRing.SetActive(false);
     }
 
     

@@ -27,13 +27,12 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public Animator animator;
         private int NewIndex;
         private int placedPrefabCount;
-        private int maxPrefabSpwanCount = 20;
         public GameObject TakeImageButton;
         public GameObject Featheredplane;
         public GameObject EnableTrackingButton;
         public GameObject DisableTrackingButton;
         public ModelLoader ModelLoader;
-        public GameObject _Ring;
+       
 
 
         public ARPlaneManager m_ARPlaneManager;
@@ -129,18 +128,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     Handheld.Vibrate();
                     canAugment = false;
                     debugLog.text = "Select Model!";
-                    TakeImageButton.SetActive(true);
-                    
-                    //placedPrefabCount++;
-                    //  gameObject.GetComponent<ARPlaneManager>().enabled = false;
-                   
+                    TakeImageButton.SetActive(true);                   
                 }
-               
-                
-                //else
-                //{
-                //    spawnedObject.transform.position = hitPose.position;
-                //}
             }
         }
 

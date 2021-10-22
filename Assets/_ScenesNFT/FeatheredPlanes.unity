@@ -3419,7 +3419,6 @@ MonoBehaviour:
   EnableTrackingButton: {fileID: 1538576115}
   DisableTrackingButton: {fileID: 926730803}
   ModelLoader: {fileID: 1389558828}
-  _Ring: {fileID: -9153980248199252776, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
   m_ARPlaneManager: {fileID: 1335839537}
 --- !u!114 &1335839537
 MonoBehaviour:
@@ -3489,7 +3488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389558825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 369.7801, y: 2085.3728, z: -74.358025}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3509,7 +3508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModelDownloader: {fileID: 1389558826}
   result: {fileID: 7689185715813486663, guid: 00a0af50298e643708787f770f1d44b2, type: 3}
-  Ring: {fileID: -9153980248199252776, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
+  Ring: {fileID: 4858454395545084405, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
+  newRing: {fileID: 0}
 --- !u!1 &1425487971
 GameObject:
   m_ObjectHideFlags: 0

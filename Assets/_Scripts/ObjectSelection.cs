@@ -7,9 +7,10 @@ using UnityEngine.XR.ARFoundation.Samples;
 
 public class ObjectSelection : MonoBehaviour
 {
-    public GameObject newRing;
     public GameObject[] Prefabs;
+  
 
+   
     private void Awake()
     {
         gameObject.GetComponent<LeanTouch>().enabled = false;
@@ -30,13 +31,11 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
         gameObject.GetComponent<LeanDragTranslate>().enabled = false;
-        
 
+        ModelLoader.Instance.newRing.SetActive(false);
     }
     private void OnMouseDown()
     {
-        newRing = RingManager._ring;
-        RingManager._ring = newRing;
        gameObject.GetComponent<LeanTouch>().enabled = true;
        gameObject.GetComponent<LeanPinchScale>().enabled = true;
        gameObject.GetComponent<LeanTwistRotateAxis>().enabled = true;
@@ -47,7 +46,7 @@ public class ObjectSelection : MonoBehaviour
         {
             model.transform.GetChild(0).gameObject.SetActive(false);
         }
-        newRing.SetActive(true);
+        ModelLoader.Instance.newRing.SetActive(true);
     }
 
 }
