@@ -13,6 +13,7 @@ public class ModelLoader : MonoBehaviour
     public GameObject result;
     public GameObject Ring;
     public GameObject newRing;
+    public GameObject ShadowPlane;
 
     public static ModelLoader Instance = null;
     private void Awake()
@@ -37,7 +38,9 @@ public class ModelLoader : MonoBehaviour
         result.gameObject.tag = "Target";
         result.GetComponentInChildren<Camera>().enabled = false;
         newRing = Instantiate(Ring, Vector3.zero, Quaternion.identity);
+        GameObject newshadowplane = Instantiate(ShadowPlane, Vector3.zero, Quaternion.identity) as GameObject;
         newRing.transform.parent = result.transform;
+        newshadowplane.transform.parent = result.transform;
         result.SetActive(false);
         newRing.SetActive(false);
     }

@@ -3510,6 +3510,8 @@ MonoBehaviour:
   result: {fileID: 7689185715813486663, guid: 00a0af50298e643708787f770f1d44b2, type: 3}
   Ring: {fileID: 4858454395545084405, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
   newRing: {fileID: 0}
+  ShadowPlane: {fileID: 8971753472544282840, guid: e2486293e0786324b9b9db53d555d1f3,
+    type: 3}
 --- !u!1 &1425487971
 GameObject:
   m_ObjectHideFlags: 0
