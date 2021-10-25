@@ -22,7 +22,7 @@ public class ObjectSelection : MonoBehaviour
         objs = GameObject.FindGameObjectsWithTag("Target");
         foreach (GameObject model in objs)
         {
-            model.transform.GetChild(0).gameObject.SetActive(false);
+            model.GetComponentInChildren<Ring>().gameObject.SetActive(false);
         }
     }
     private void OnMouseUp()
@@ -32,21 +32,24 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
         gameObject.GetComponent<LeanDragTranslate>().enabled = false;
 
-        ModelLoader.Instance.newRing.SetActive(false);
+       // transform.GetChild(0).gameObject.SetActive(false);
+        //ModelLoader.Instance.newRing.SetActive(false);
     }
     private void OnMouseDown()
     {
-       gameObject.GetComponent<LeanTouch>().enabled = true;
-       gameObject.GetComponent<LeanPinchScale>().enabled = true;
-       gameObject.GetComponent<LeanTwistRotateAxis>().enabled = true;
-       gameObject.GetComponent<LeanDragTranslate>().enabled = true;
+        gameObject.GetComponent<LeanTouch>().enabled = true;
+        gameObject.GetComponent<LeanPinchScale>().enabled = true;
+        gameObject.GetComponent<LeanTwistRotateAxis>().enabled = true;
+        gameObject.GetComponent<LeanDragTranslate>().enabled = true;
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
         foreach (GameObject model in objs)
         {
-            model.transform.GetChild(0).gameObject.SetActive(false);
+            model.GetComponentInChildren<Ring>().gameObject.SetActive(false);
         }
-        ModelLoader.Instance.newRing.SetActive(true);
+        GetComponentInChildren<Ring>().gameObject.SetActive(true);
+        //transform.GetChild(0).gameObject.SetActive(true);
+        //ModelLoader.Instance.newRing.SetActive(true);
     }
 
 }
