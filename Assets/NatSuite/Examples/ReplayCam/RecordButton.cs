@@ -17,12 +17,12 @@ namespace NatSuite.Examples.Components {
 		public Image button, countdown;
 		public UnityEvent onTouchDown, onTouchUp;
 		public UnityEvent onSingleClick;
-
 		private bool pressed;
 		private bool isRecording = false;
 		private const float MaxRecordingTime = 10f; // seconds
 
 		private void Start () {
+			
 			Reset();
 		}
 
@@ -72,7 +72,6 @@ namespace NatSuite.Examples.Components {
 			// Reset
 			Reset();
 			// Stop recording
-
 			if (onTouchUp != null)
 			{
 				onTouchUp.Invoke();
