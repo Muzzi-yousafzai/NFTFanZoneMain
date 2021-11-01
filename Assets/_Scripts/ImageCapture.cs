@@ -13,10 +13,6 @@ public class ImageCapture : MonoBehaviour
 	
 			StartCoroutine(TakeScreenshotAndShare());
 	}
-	void Update()
-	{
-		
-	}
 
 	private IEnumerator TakeScreenshotAndShare()
 	{
@@ -44,4 +40,6 @@ public class ImageCapture : MonoBehaviour
 		//if( NativeShare.TargetExists( "com.whatsapp" ) )
 		//	new NativeShare().AddFile( filePath ).AddTarget( "com.whatsapp" ).Share();
 	}
+	
+
 }
