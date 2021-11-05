@@ -20,10 +20,7 @@ public class ObjectSelection : MonoBehaviour
         
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
-        foreach (GameObject model in objs)
-        {
-            model.GetComponentInChildren<Ring>().gameObject.SetActive(false);
-        }
+       
     }
     private void OnMouseUp()
     {
@@ -43,11 +40,7 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanDragTranslate>().enabled = true;
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
-        foreach (GameObject model in objs)
-        {
-            model.GetComponentInChildren<Ring>().gameObject.SetActive(false);
-        }
-        GetComponentInChildren<Ring>().gameObject.SetActive(true);
+       
         //transform.GetChild(0).gameObject.SetActive(true);
         //ModelLoader.Instance.newRing.SetActive(true);
     }
