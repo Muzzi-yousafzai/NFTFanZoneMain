@@ -8,15 +8,15 @@ using UnityEngine.XR.ARFoundation.Samples;
 public class ObjectSelection : MonoBehaviour
 {
     public GameObject[] Prefabs;
-  
 
+    public RingManager RingManager;
    
     private void Awake()
     {
         gameObject.GetComponent<LeanTouch>().enabled = false;
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
-        gameObject.GetComponent<LeanDragTranslate>().enabled = false;
+        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = false;
         
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
@@ -27,9 +27,10 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanTouch>().enabled = false;
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
-        gameObject.GetComponent<LeanDragTranslate>().enabled = false;
-
-       // transform.GetChild(0).gameObject.SetActive(false);
+        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = false;
+        RingManager.DeleteButton.SetActive(false);
+        RingManager.AddButton.SetActive(true);
+        // transform.GetChild(0).gameObject.SetActive(false);
         //ModelLoader.Instance.newRing.SetActive(false);
     }
     private void OnMouseDown()
@@ -37,7 +38,9 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanTouch>().enabled = true;
         gameObject.GetComponent<LeanPinchScale>().enabled = true;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = true;
-        gameObject.GetComponent<LeanDragTranslate>().enabled = true;
+        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = true;
+        RingManager.DeleteButton.SetActive(true);
+        RingManager.AddButton.SetActive(false);
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
        
