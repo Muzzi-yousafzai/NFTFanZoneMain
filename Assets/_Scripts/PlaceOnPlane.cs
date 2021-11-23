@@ -32,15 +32,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public GameObject EnableTrackingButton;
         public GameObject DisableTrackingButton;
         public ModelLoader ModelLoader;
-<<<<<<< HEAD
         public GameObject shadowPlane;
         bool isShadowPlaneAugmented=false;
         public GameObject AddButton;
-=======
-       
 
-
->>>>>>> parent of 40de708 (Model from server)
         public ARPlaneManager m_ARPlaneManager;
         public GameObject DeleteButton;
         
@@ -116,10 +111,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             touchPosition = default;
             return false;
         }
-        public void Delete()
-        {
-            Destroy(Prefabs[NewIndex]);
-        }
+
         void Update()
         {
             if (!TryGetTouchPosition(out Vector2 touchPosition))
@@ -141,6 +133,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     debugLog.text = "Select Model!";
                     TakeImageButton.SetActive(true);
                     AddButton.SetActive(true);
+                    DeleteButton.SetActive(true);
                     if(Input.GetMouseButton(0))
                     {
                         AddButton.SetActive(false);

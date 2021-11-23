@@ -11,17 +11,15 @@ public class ModelLoader : MonoBehaviour
     private string filepath;
     public ModelDownloader ModelDownloader;
     public GameObject result;
-<<<<<<< HEAD
+
     public GameObject refObj;
     public PlaceOnPlane placeOnPlane;
     public GameObject loadingButton;
     public GameObject Load;
-    public GameObject newRing;
-=======
     public GameObject Ring;
     public GameObject newRing;
     public GameObject ShadowPlane;
->>>>>>> parent of 40de708 (Model from server)
+
 
     public static ModelLoader Instance = null;
     private void Awake()
@@ -57,33 +55,25 @@ public class ModelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
 
-        
-=======
-        
         if(Input.GetKeyDown(KeyCode.L))
         {
             filepath = ModelDownloader.localURL;
 
             ImportGLTF();
         }
->>>>>>> parent of 40de708 (Model from server)
+
+
     }
     public void LoadModel()
     {
         {
             loadingButton.SetActive(true);
-            filepath = ModelDownloader.localURL;
-<<<<<<< HEAD
-            Load.SetActive(false);
-=======
-
->>>>>>> parent of 40de708 (Model from server)
+           
             ImportGLTF();
             result.AddComponent<ObjectSelection>();
             loadingButton.SetActive(false);
-            
+            Load.SetActive(false);
         }
     }
 
