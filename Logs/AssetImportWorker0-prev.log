@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.20f1 (be552157821d) revision 12473633'; Using compiler version '192528614'; Build Type 'Release'
 OS: 'Windows 10 Pro; OS build 19042.1288; Version 2009; 64bit' Language: 'en' Physical Memory: 8072 MB
@@ -8,8 +7,6 @@ BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, I
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\2021.1.20f1\Editor\Unity.exe
 =======
-=======
->>>>>>> parent of af255e9 (fixes)
 Unity Editor version:    2020.3.20f1 (41c4e627c95f)
 Branch:                  2020.3/staging
 Build type:              Release
@@ -24,9 +21,6 @@ Pro License: NO
 
 COMMAND LINE ARGUMENTS:
 /Applications/Unity.app/Contents/MacOS/Unity
-<<<<<<< HEAD
->>>>>>> parent of af255e9 (fixes)
-=======
 >>>>>>> parent of af255e9 (fixes)
 -adb2
 -batchMode
@@ -34,7 +28,6 @@ COMMAND LINE ARGUMENTS:
 -name
 AssetImportWorker0
 -projectPath
-<<<<<<< HEAD
 <<<<<<< HEAD
 D:/Unity Projects/NFTFanZoneMain
 -logFile
@@ -74,8 +67,6 @@ Domain Reload Profiling:
 	ReloadAssembly (3590ms)
 		BeginReloadAssembly (138ms)
 =======
-=======
->>>>>>> parent of af255e9 (fixes)
 /Users/EuphoriaXR/Desktop/Data/Unity Projects/NFTFanZoneMain
 -logFile
 Logs/AssetImportWorker0.log
@@ -113,16 +104,12 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1297ms)
 		BeginReloadAssembly (37ms)
-<<<<<<< HEAD
->>>>>>> parent of af255e9 (fixes)
-=======
 >>>>>>> parent of af255e9 (fixes)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-<<<<<<< HEAD
 <<<<<<< HEAD
 		EndReloadAssembly (783ms)
 			LoadAssemblies (134ms)
@@ -139,8 +126,6 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (290ms)
 				ProcessInitializeOnLoadMethodAttributes (74ms)
 =======
-=======
->>>>>>> parent of af255e9 (fixes)
 		EndReloadAssembly (469ms)
 			LoadAssemblies (35ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -155,9 +140,6 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (25ms)
 				ProcessInitializeOnLoadAttributes (90ms)
 				ProcessInitializeOnLoadMethodAttributes (29ms)
-<<<<<<< HEAD
->>>>>>> parent of af255e9 (fixes)
-=======
 >>>>>>> parent of af255e9 (fixes)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -165,7 +147,6 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.003713 seconds.
 Begin MonoManager ReloadAssembly
@@ -216,8 +197,6 @@ Total: 3.993200 ms (FindLiveObjects: 0.216800 ms CreateObjectMapping: 0.088400 m
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
 =======
-=======
->>>>>>> parent of af255e9 (fixes)
 Registered in 0.001745 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
@@ -280,9 +259,6 @@ Unloading 195 unused Assets to reduce memory usage. Loaded Objects now: 2669.
 Total: 4.117722 ms (FindLiveObjects: 0.329197 ms CreateObjectMapping: 0.091784 ms MarkObjects: 3.103410 ms  DeleteObjects: 0.592333 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-<<<<<<< HEAD
->>>>>>> parent of af255e9 (fixes)
-=======
 >>>>>>> parent of af255e9 (fixes)
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -290,10 +266,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
->>>>>>> parent of af255e9 (fixes)
 =======
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
 >>>>>>> parent of af255e9 (fixes)
@@ -302,7 +274,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-<<<<<<< HEAD
 <<<<<<< HEAD
   path: Assets/_Scripts/PlaceOnPlane.cs
   artifactKey: Guid(ed2c410968ccb43e4b7d12d0be351472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -357,8 +328,6 @@ Total: 13.094900 ms (FindLiveObjects: 0.690800 ms CreateObjectMapping: 0.546800 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
 =======
-=======
->>>>>>> parent of af255e9 (fixes)
   path: Assets/_Scripts
   artifactKey: Guid(a2eef30838b3d4f2599c94ae692b7451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/_Scripts using Guid(a2eef30838b3d4f2599c94ae692b7451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b11a36b2ef2e593d9ccadf60d51695c4') in 0.006274 seconds 
@@ -5736,9 +5705,6 @@ Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3053.
 Total: 4.594552 ms (FindLiveObjects: 0.457409 ms CreateObjectMapping: 0.209972 ms MarkObjects: 3.783255 ms  DeleteObjects: 0.142998 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-<<<<<<< HEAD
->>>>>>> parent of af255e9 (fixes)
-=======
 >>>>>>> parent of af255e9 (fixes)
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
@@ -5746,20 +5712,14 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
 <<<<<<< HEAD
-<<<<<<< HEAD
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 =======
-=======
->>>>>>> parent of af255e9 (fixes)
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-<<<<<<< HEAD
->>>>>>> parent of af255e9 (fixes)
-=======
 >>>>>>> parent of af255e9 (fixes)

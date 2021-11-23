@@ -36,7 +36,6 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         RingManager.DeleteButton.SetActive(false);
         RingManager.AddButton.enabled = true;
         transform.GetChild(0).gameObject.SetActive(false);
@@ -45,13 +44,6 @@ public class ObjectSelection : MonoBehaviour
 
 >>>>>>> parent of 40de708 (Model from server)
         ModelLoader.Instance.newRing.SetActive(false);
-=======
-        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = false;
-        RingManager.DeleteButton.SetActive(false);
-        RingManager.AddButton.SetActive(true);
-        // transform.GetChild(0).gameObject.SetActive(false);
-        //ModelLoader.Instance.newRing.SetActive(false);
->>>>>>> parent of af255e9 (fixes)
 =======
         gameObject.GetComponent<LeanDragTranslateAlong>().enabled = false;
         RingManager.DeleteButton.SetActive(false);
@@ -73,7 +65,6 @@ public class ObjectSelection : MonoBehaviour
         objs = GameObject.FindGameObjectsWithTag("Target");
        
 <<<<<<< HEAD
-<<<<<<< HEAD
         transform.GetChild(0).gameObject.SetActive(true);
 =======
        gameObject.GetComponent<LeanTouch>().enabled = true;
@@ -88,10 +79,6 @@ public class ObjectSelection : MonoBehaviour
         }
 >>>>>>> parent of 40de708 (Model from server)
         ModelLoader.Instance.newRing.SetActive(true);
-=======
-        //transform.GetChild(0).gameObject.SetActive(true);
-        //ModelLoader.Instance.newRing.SetActive(true);
->>>>>>> parent of af255e9 (fixes)
 =======
         //transform.GetChild(0).gameObject.SetActive(true);
         //ModelLoader.Instance.newRing.SetActive(true);

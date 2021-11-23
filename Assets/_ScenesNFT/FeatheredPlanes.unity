@@ -40,14 +40,10 @@ RenderSettings:
   m_Sun: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
 =======
   m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 >>>>>>> parent of 40de708 (Model from server)
-=======
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
->>>>>>> parent of af255e9 (fixes)
 =======
   m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
 >>>>>>> parent of af255e9 (fixes)
@@ -3775,7 +3771,6 @@ MonoBehaviour:
   placeOnPlane: {fileID: 1335839536}
   loadingButton: {fileID: 832001729}
 <<<<<<< HEAD
-<<<<<<< HEAD
   Load: {fileID: 1246040084}
   newRing: {fileID: 4858454395545084405, guid: 20b48b57f0d87134c896317da6ecdb79, type: 3}
 =======
@@ -3784,8 +3779,6 @@ MonoBehaviour:
   ShadowPlane: {fileID: 8971753472544282840, guid: e2486293e0786324b9b9db53d555d1f3,
     type: 3}
 >>>>>>> parent of 40de708 (Model from server)
-=======
->>>>>>> parent of af255e9 (fixes)
 =======
 >>>>>>> parent of af255e9 (fixes)
 --- !u!1 &1425487971
