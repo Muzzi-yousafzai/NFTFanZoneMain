@@ -110,7 +110,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
             touchPosition = default;
             return false;
         }
-
+        public void Delete()
+        {
+            Destroy(Prefabs[NewIndex]);
+        }
         void Update()
         {
             if (!TryGetTouchPosition(out Vector2 touchPosition))
@@ -138,7 +141,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     debugLog.text = "Select Model!";
                     TakeImageButton.SetActive(true);
                     AddButton.SetActive(true);
-                    DeleteButton.SetActive(true);
                     if(Input.GetMouseButton(0))
                     {
                         AddButton.SetActive(false);
