@@ -36,6 +36,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         bool isShadowPlaneAugmented=false;
         public GameObject AddButton;
         public ARPlaneManager m_ARPlaneManager;
+        
         /// <summary>
         /// The prefab to instantiate on touch.
         /// </summary>
@@ -135,6 +136,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     canAugment = false;
                     debugLog.text = "Select Model!";
                     TakeImageButton.SetActive(true);
+                    AddButton.SetActive(true);
                     if(Input.GetMouseButton(0))
                     {
                         AddButton.SetActive(false);

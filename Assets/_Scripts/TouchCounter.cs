@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class TouchCounter : MonoBehaviour
 {
+    private int check;
     public GameObject AddButton;
     void Update()
     {
         {
             if (Input.GetMouseButton(0))
             {
-                AddButton.SetActive(true);  
+                if (check != 1)
+                {
+                    AddButton.SetActive(true);
+                    check = 1;
+                }
+                
             }
         }
     }
