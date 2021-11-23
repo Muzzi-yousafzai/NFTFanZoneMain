@@ -14,6 +14,7 @@ public class ModelLoader : MonoBehaviour
     public GameObject refObj;
     public PlaceOnPlane placeOnPlane;
     public GameObject loadingButton;
+    public GameObject Load;
 
     public static ModelLoader Instance = null;
     private void Awake()
@@ -54,6 +55,9 @@ public class ModelLoader : MonoBehaviour
             loadingButton.SetActive(true);
             filepath = ModelDownloader.localURL;
             ImportGLTF();
+            result.AddComponent<ObjectSelection>();
+            loadingButton.SetActive(false);
+            Load.SetActive(false);
         }
     }
 
