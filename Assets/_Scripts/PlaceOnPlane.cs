@@ -32,9 +32,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public GameObject EnableTrackingButton;
         public GameObject DisableTrackingButton;
         public ModelLoader ModelLoader;
+<<<<<<< HEAD
         public GameObject shadowPlane;
         bool isShadowPlaneAugmented=false;
         public GameObject AddButton;
+=======
+       
+
+
+>>>>>>> parent of 40de708 (Model from server)
         public ARPlaneManager m_ARPlaneManager;
         public GameObject DeleteButton;
         
@@ -78,8 +84,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public void SelectModel(int index)
         {
             NewIndex = index;
-            //ModelLoader.LoadModel();
-           // Prefabs[NewIndex] = ModelLoader.result;
+            ModelLoader.LoadModel();
+            Prefabs[NewIndex] = ModelLoader.result;
             debugLog.text = "Tap to place new Model!";
             animator.SetTrigger("Down");
             Invoke(nameof(TurnAugmentation), 1.0f);
@@ -127,14 +133,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 
                 if(canAugment)
                 {
-                    if (!isShadowPlaneAugmented)
-                    {
-                        Instantiate(shadowPlane, hitPose.position, hitPose.rotation);
-                        isShadowPlaneAugmented = true;
-                    }
-                    
-                    GameObject result = Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
-                    result.SetActive(true);
+                   Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
+                    Prefabs[NewIndex].SetActive(true);
                     onContentPlaced.Invoke();
                     Handheld.Vibrate();
                     canAugment = false;

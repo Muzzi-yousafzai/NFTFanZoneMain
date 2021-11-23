@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 m_EditorVersion: 2020.3.20f1
 m_EditorVersionWithRevision: 2020.3.20f1 (41c4e627c95f)
+=======
+m_EditorVersion: 2021.1.20f1
+m_EditorVersionWithRevision: 2021.1.20f1 (be552157821d)
+>>>>>>> parent of 40de708 (Model from server)
