@@ -17,12 +17,15 @@ public class ModelLoader : MonoBehaviour
     public GameObject loadingButton;
     public GameObject Load;
 <<<<<<< HEAD
+<<<<<<< HEAD
     public GameObject newRing;
 =======
     public GameObject Ring;
     public GameObject newRing;
     public GameObject ShadowPlane;
 >>>>>>> parent of 40de708 (Model from server)
+=======
+>>>>>>> parent of af255e9 (fixes)
 =======
 >>>>>>> parent of af255e9 (fixes)
 
@@ -63,6 +66,7 @@ public class ModelLoader : MonoBehaviour
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
         
@@ -74,10 +78,15 @@ public class ModelLoader : MonoBehaviour
         }
 >>>>>>> parent of 40de708 (Model from server)
 =======
+=======
+>>>>>>> parent of af255e9 (fixes)
         if (Input.GetKeyDown(KeyCode.L))
         {
             LoadModel();
         }
+<<<<<<< HEAD
+>>>>>>> parent of af255e9 (fixes)
+=======
 >>>>>>> parent of af255e9 (fixes)
     }
     public void LoadModel()
@@ -87,10 +96,13 @@ public class ModelLoader : MonoBehaviour
             filepath = ModelDownloader.localURL;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Load.SetActive(false);
 =======
 
 >>>>>>> parent of 40de708 (Model from server)
+=======
+>>>>>>> parent of af255e9 (fixes)
 =======
 >>>>>>> parent of af255e9 (fixes)
             ImportGLTF();
