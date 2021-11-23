@@ -16,7 +16,7 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanTouch>().enabled = false;
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
-      
+        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = false;
         
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
@@ -35,6 +35,7 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
         RingManager.DeleteButton.SetActive(false);
         RingManager.AddButton.enabled = true;
         transform.GetChild(0).gameObject.SetActive(false);
@@ -43,6 +44,13 @@ public class ObjectSelection : MonoBehaviour
 
 >>>>>>> parent of 40de708 (Model from server)
         ModelLoader.Instance.newRing.SetActive(false);
+=======
+        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = false;
+        RingManager.DeleteButton.SetActive(false);
+        RingManager.AddButton.SetActive(true);
+        // transform.GetChild(0).gameObject.SetActive(false);
+        //ModelLoader.Instance.newRing.SetActive(false);
+>>>>>>> parent of af255e9 (fixes)
     }
     private void OnMouseDown()
     {
@@ -50,11 +58,13 @@ public class ObjectSelection : MonoBehaviour
         gameObject.GetComponent<LeanTouch>().enabled = true;
         gameObject.GetComponent<LeanPinchScale>().enabled = true;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = true;
+        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = true;
         RingManager.DeleteButton.SetActive(true);
-        RingManager.AddButton.enabled = false;
+        RingManager.AddButton.SetActive(false);
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
        
+<<<<<<< HEAD
         transform.GetChild(0).gameObject.SetActive(true);
 =======
        gameObject.GetComponent<LeanTouch>().enabled = true;
@@ -69,6 +79,10 @@ public class ObjectSelection : MonoBehaviour
         }
 >>>>>>> parent of 40de708 (Model from server)
         ModelLoader.Instance.newRing.SetActive(true);
+=======
+        //transform.GetChild(0).gameObject.SetActive(true);
+        //ModelLoader.Instance.newRing.SetActive(true);
+>>>>>>> parent of af255e9 (fixes)
     }
 
 }

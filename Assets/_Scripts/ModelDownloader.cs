@@ -22,7 +22,10 @@ public class ModelDownloader : MonoBehaviour
     }
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Download();
+        }
        
     }
 
@@ -39,7 +42,6 @@ public class ModelDownloader : MonoBehaviour
         {
             
             StartCoroutine(DownloadVideo());
-            Downloadbutton.SetActive(false);
         }
         
     }

@@ -16,12 +16,15 @@ public class ModelLoader : MonoBehaviour
     public PlaceOnPlane placeOnPlane;
     public GameObject loadingButton;
     public GameObject Load;
+<<<<<<< HEAD
     public GameObject newRing;
 =======
     public GameObject Ring;
     public GameObject newRing;
     public GameObject ShadowPlane;
 >>>>>>> parent of 40de708 (Model from server)
+=======
+>>>>>>> parent of af255e9 (fixes)
 
     public static ModelLoader Instance = null;
     private void Awake()
@@ -59,6 +62,7 @@ public class ModelLoader : MonoBehaviour
     {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         
 =======
         
@@ -69,6 +73,12 @@ public class ModelLoader : MonoBehaviour
             ImportGLTF();
         }
 >>>>>>> parent of 40de708 (Model from server)
+=======
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadModel();
+        }
+>>>>>>> parent of af255e9 (fixes)
     }
     public void LoadModel()
     {
@@ -76,14 +86,17 @@ public class ModelLoader : MonoBehaviour
             loadingButton.SetActive(true);
             filepath = ModelDownloader.localURL;
 <<<<<<< HEAD
+<<<<<<< HEAD
             Load.SetActive(false);
 =======
 
 >>>>>>> parent of 40de708 (Model from server)
+=======
+>>>>>>> parent of af255e9 (fixes)
             ImportGLTF();
             result.AddComponent<ObjectSelection>();
             loadingButton.SetActive(false);
-            
+            Load.SetActive(false);
         }
     }
 
