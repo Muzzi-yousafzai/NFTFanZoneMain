@@ -31,7 +31,7 @@ public class ModelLoader : MonoBehaviour
 
         result = Importer.LoadFromFile(filepath);
         Destroy(result.GetComponentInChildren<Camera>().gameObject);
-        GameObject finalResult = Instantiate(refObj, Vector3.zero, transform.rotation);
+        GameObject finalResult = Instantiate(refObj, Vector3.zero, transform.rotation);  
         result.transform.localScale = new Vector3(5, 5, 5);
         result.transform.parent = finalResult.transform;
         result.transform.localPosition = Vector3.zero;
@@ -44,10 +44,7 @@ public class ModelLoader : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadModel();
-        }
+        
     }
     public void LoadModel()
     {
@@ -56,7 +53,7 @@ public class ModelLoader : MonoBehaviour
             filepath = ModelDownloader.localURL;
             ImportGLTF();
             LoadButon.SetActive(false);
-            Loading.SetActive(false);
+            
         }
     }
 
