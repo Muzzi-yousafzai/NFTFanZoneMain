@@ -1,5 +1,4 @@
 using UnityEngine;
-using Lean.Common;
 
 namespace Lean.Touch
 {
@@ -38,7 +37,7 @@ namespace Lean.Touch
 		/// <summary>The layers used in the raycast.</summary>
 		public LayerMask Layers;
 
-		/// <summary>Tooltips are modified at runtime based on Conversion setting.</summary>
+		/// <summary>Toolips are modified at runtime based on Conversion setting.</summary>
 		public float Distance;
 
 		/// <summary>When performing a ScreenDepth conversion, the converted point can have a normal associated with it. This stores that.</summary>
@@ -77,7 +76,7 @@ namespace Lean.Touch
 		// This will do the actual conversion
 		public bool TryConvert(ref Vector3 position, Vector2 screenPoint, GameObject gameObject = null, Transform ignore = null)
 		{
-			var camera = LeanHelper.GetCamera(Camera, gameObject);
+			var camera = LeanTouch.GetCamera(Camera, gameObject);
 
 			if (camera != null)
 			{
@@ -283,7 +282,7 @@ namespace Lean.Touch
 }
 
 #if UNITY_EDITOR
-namespace Lean.Touch.Editor
+namespace Lean.Touch
 {
 	using UnityEditor;
 
@@ -327,9 +326,9 @@ namespace Lean.Touch.Editor
 				{
 					case LeanScreenDepth.ConversionType.FixedDistance:
 					{
-						LeanEditor.BeginError(property.FindPropertyRelative("Distance").floatValue == 0.0f);
+						var color = GUI.color; if (property.FindPropertyRelative("Distance").floatValue == 0.0f) GUI.color = Color.red;
 						DrawProperty(ref rect, property, label, "Distance", "Distance", "The world space distance from the camera the point will be placed. This should be greater than 0.");
-						LeanEditor.EndError();
+						GUI.color = color;
 					}
 					break;
 
@@ -341,9 +340,9 @@ namespace Lean.Touch.Editor
 
 					case LeanScreenDepth.ConversionType.PhysicsRaycast:
 					{
-						LeanEditor.BeginError(property.FindPropertyRelative("Layers").intValue == 0);
+						var color = GUI.color; if (property.FindPropertyRelative("Layers").intValue == 0) GUI.color = Color.red;
 							DrawProperty(ref rect, property, label, "Layers", "The layers used in the raycast.");
-						LeanEditor.EndError();
+						GUI.color = color;
 						DrawProperty(ref rect, property, label, "Distance", "Offset", "The world space offset from the raycast hit point.");
 					}
 					break;

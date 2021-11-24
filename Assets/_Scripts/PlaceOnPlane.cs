@@ -35,10 +35,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public GameObject shadowPlane;
         bool isShadowPlaneAugmented=false;
         public GameObject AddButton;
-
         public ARPlaneManager m_ARPlaneManager;
-        public GameObject DeleteButton;
-        
         /// <summary>
         /// The prefab to instantiate on touch.
         /// </summary>
@@ -79,8 +76,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public void SelectModel(int index)
         {
             NewIndex = index;
-            ModelLoader.LoadModel();
-            Prefabs[NewIndex] = ModelLoader.result;
+            //ModelLoader.LoadModel();
+           // Prefabs[NewIndex] = ModelLoader.result;
             debugLog.text = "Tap to place new Model!";
             animator.SetTrigger("Down");
             Invoke(nameof(TurnAugmentation), 1.0f);
@@ -125,22 +122,28 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 
                 if(canAugment)
                 {
-                   Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
-                    Prefabs[NewIndex].SetActive(true);
+                    if (!isShadowPlaneAugmented)
+                    {
+                        Instantiate(shadowPlane, hitPose.position, hitPose.rotation);
+                        isShadowPlaneAugmented = true;
+                    }
+                    
+                    GameObject result = Instantiate(Prefabs[NewIndex], hitPose.position, hitPose.rotation);
+                    result.SetActive(true);
                     onContentPlaced.Invoke();
                     Handheld.Vibrate();
+                    AddButton.SetActive(true);
                     canAugment = false;
                     debugLog.text = "Select Model!";
                     TakeImageButton.SetActive(true);
-                    AddButton.SetActive(true);
-                    DeleteButton.SetActive(true);
-                    if(Input.GetMouseButton(0))
-                    {
-                        AddButton.SetActive(false);
-                    }
+                }
+                if(Input.GetMouseButton(0))
+                {
+                    AddButton.SetActive(false);
                 }
             }
         }
+        
 
         static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 

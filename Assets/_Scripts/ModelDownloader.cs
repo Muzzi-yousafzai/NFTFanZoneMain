@@ -5,12 +5,12 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-
 public class ModelDownloader : MonoBehaviour
 {
     private string serverURL = "https://xlmoose.com/nft/poodlTest/PoodlFinalWithAccessories.glb";
     public string localURL;
-    public GameObject Downloadbutton;
+    public GameObject DowloadButton;
+    public GameObject LoadButton;
   
     public Text loadingProgress;
 
@@ -34,14 +34,15 @@ public class ModelDownloader : MonoBehaviour
         if (File.Exists(localURL))
         {
             Debug.Log("File Already Downloaded!");
-
-            Downloadbutton.SetActive(false);
-
+            DowloadButton.SetActive(false);
+            LoadButton.SetActive(true);
+            
         }
         else
         {
             
             StartCoroutine(DownloadVideo());
+            LoadButton.SetActive(true);
         }
         
     }

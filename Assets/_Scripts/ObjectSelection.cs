@@ -7,47 +7,61 @@ using UnityEngine.XR.ARFoundation.Samples;
 
 public class ObjectSelection : MonoBehaviour
 {
-    public GameObject[] Prefabs;
+   
+   
 
-    public RingManager RingManager;
-
+   
     private void Awake()
     {
         gameObject.GetComponent<LeanTouch>().enabled = false;
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
-        gameObject.GetComponent<LeanDragTranslateAlong>().enabled = false;
-
+        
+        
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
-
+        foreach (GameObject model in objs)
+        {
+            model.GetComponentInChildren<Ring>().gameObject.SetActive(false);
+        }
     }
-     void OnMouseUp()
+    private void OnMouseUp()
     {
         gameObject.GetComponent<LeanTouch>().enabled = false;
         gameObject.GetComponent<LeanPinchScale>().enabled = false;
         gameObject.GetComponent<LeanTwistRotateAxis>().enabled = false;
 
-        RingManager.DeleteButton.SetActive(false);
-        RingManager.AddButton.SetActive(true);
+        TouchCounter.Instance.DeleteButton.SetActive(false);
+        TouchCounter.Instance.Addbutton.interactable = true;
         GameObject[] objs;
         objs = GameObject.FindGameObjectsWithTag("Target");
-        transform.GetChild(0).gameObject.SetActive(false);
-
-         void OnMouseDown()
-
+        foreach (GameObject model in objs)
         {
-            gameObject.GetComponent<LeanTouch>().enabled = true;
-            gameObject.GetComponent<LeanPinchScale>().enabled = true;
-            gameObject.GetComponent<LeanTwistRotateAxis>().enabled = true;
-            gameObject.GetComponent<LeanDragTranslateAlong>().enabled = true;
-            RingManager.DeleteButton.SetActive(true);
-            RingManager.AddButton.SetActive(false);
-            GameObject[] objs;
-            objs = GameObject.FindGameObjectsWithTag("Target");
-
+            model.GetComponentInChildren<Ring>().gameObject.SetActive(false);
         }
-
+        GetComponentInChildren<Ring>().gameObject.SetActive(false );
+        // transform.GetChild(0).gameObject.SetActive(false);
+        //ModelLoader.Instance.newRing.SetActive(false);
     }
+    private void OnMouseDown()
+    {
+        gameObject.GetComponent<LeanTouch>().enabled = true;
+        gameObject.GetComponent<LeanPinchScale>().enabled = true;
+        gameObject.GetComponent<LeanTwistRotateAxis>().enabled = true;
+        
+        GameObject[] objs;
+        objs = GameObject.FindGameObjectsWithTag("Target");
+        foreach (GameObject model in objs)
+        {
+            model.GetComponentInChildren<Ring>().gameObject.SetActive(false);
+        }
+        GetComponentInChildren<Ring>().gameObject.SetActive(true);
+        TouchCounter.Instance.Addbutton.interactable = false;
+        TouchCounter.Instance.DeleteButton.SetActive(true);
+        
+        //transform.GetChild(0).gameObject.SetActive(true);
+        //ModelLoader.Instance.newRing.SetActive(true);
+    }
+
 }
 

@@ -5,6 +5,4 @@ using UnityEngine;
 public class RingManager : MonoBehaviour
 {
     public static GameObject _ring;
-    public GameObject DeleteButton;
-    public GameObject AddButton;
 }

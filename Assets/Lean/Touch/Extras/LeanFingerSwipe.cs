@@ -1,6 +1,4 @@
 using UnityEngine;
-using Lean.Common;
-using FSA = UnityEngine.Serialization.FormerlySerializedAsAttribute;
 
 namespace Lean.Touch
 {
@@ -11,26 +9,26 @@ namespace Lean.Touch
 	public class LeanFingerSwipe : LeanSwipeBase
 	{
 		/// <summary>Ignore fingers with StartedOverGui?</summary>
-		public bool IgnoreStartedOverGui { set { ignoreStartedOverGui = value; } get { return ignoreStartedOverGui; } } [FSA("IgnoreStartedOverGui")] [SerializeField] private bool ignoreStartedOverGui = true;
+		public bool IgnoreStartedOverGui = true;
 
-		/// <summary>Ignore fingers with OverGui?</summary>
-		public bool IgnoreIsOverGui { set { ignoreIsOverGui = value; } get { return ignoreIsOverGui; } } [FSA("IgnoreIsOverGui")] [SerializeField] private bool ignoreIsOverGui;
+		/// <summary>Ignore fingers with IsOverGui?</summary>
+		public bool IgnoreIsOverGui;
 
-		/// <summary>If the specified object is set and isn't selected, then this component will do nothing.</summary>
-		public LeanSelectable RequiredSelectable { set { requiredSelectable = value; } get { return requiredSelectable; } } [FSA("RequiredSelectable")] [SerializeField] private LeanSelectable requiredSelectable;
+		/// <summary>Do nothing if this LeanSelectable isn't selected?</summary>
+		public LeanSelectable RequiredSelectable;
 
 #if UNITY_EDITOR
 		protected virtual void Reset()
 		{
-			requiredSelectable = GetComponentInParent<LeanSelectable>();
+			RequiredSelectable = GetComponentInParent<LeanSelectable>();
 		}
 #endif
 
-		protected virtual void Start()
+		protected virtual void Awake()
 		{
-			if (requiredSelectable == null)
+			if (RequiredSelectable == null)
 			{
-				requiredSelectable = GetComponentInParent<LeanSelectable>();
+				RequiredSelectable = GetComponentInParent<LeanSelectable>();
 			}
 		}
 
@@ -46,17 +44,17 @@ namespace Lean.Touch
 
 		private void HandleFingerSwipe(LeanFinger finger)
 		{
-			if (ignoreStartedOverGui == true && finger.StartedOverGui == true)
+			if (IgnoreStartedOverGui == true && finger.StartedOverGui == true)
 			{
 				return;
 			}
 
-			if (ignoreIsOverGui == true && finger.IsOverGui == true)
+			if (IgnoreIsOverGui == true && finger.IsOverGui == true)
 			{
 				return;
 			}
 
-			if (requiredSelectable != null && requiredSelectable.IsSelected == false)
+			if (RequiredSelectable != null && RequiredSelectable.IsSelectedBy(finger) == false)
 			{
 				return;
 			}
@@ -67,23 +65,21 @@ namespace Lean.Touch
 }
 
 #if UNITY_EDITOR
-namespace Lean.Touch.Editor
+namespace Lean.Touch.Inspector
 {
-	using TARGET = LeanFingerSwipe;
+	using UnityEditor;
 
-	[UnityEditor.CanEditMultipleObjects]
-	[UnityEditor.CustomEditor(typeof(TARGET))]
-	public class LeanFingerSwipe_Editor : LeanSwipeBase_Editor
+	[CanEditMultipleObjects]
+	[CustomEditor(typeof(LeanFingerSwipe))]
+	public class LeanFingerSwipe_Inspector : LeanSwipeBase_Inspector<LeanFingerSwipe>
 	{
-		protected override void OnInspector()
+		protected override void DrawInspector()
 		{
-			TARGET tgt; TARGET[] tgts; GetTargets(out tgt, out tgts);
+			Draw("IgnoreStartedOverGui", "Ignore fingers with StartedOverGui?");
+			Draw("IgnoreIsOverGui", "Ignore fingers with IsOverGui?");
+			Draw("RequiredSelectable", "Do nothing if this LeanSelectable isn't selected?");
 
-			Draw("ignoreStartedOverGui", "Ignore fingers with StartedOverGui?");
-			Draw("ignoreIsOverGui", "Ignore fingers with OverGui?");
-			Draw("requiredSelectable", "If the specified object is set and isn't selected, then this component will do nothing.");
-
-			base.OnInspector();
+			base.DrawInspector();
 		}
 	}
 }

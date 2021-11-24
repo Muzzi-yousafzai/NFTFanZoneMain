@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using Lean.Common;
 using FSA = UnityEngine.Serialization.FormerlySerializedAsAttribute;
 
 namespace Lean.Touch
@@ -33,13 +32,15 @@ namespace Lean.Touch
 		/// 90 = Right.
 		/// 180 = Down.
 		/// 270 = Left.</summary>
-		public float RequiredAngle { set { requiredAngle = value; } get { return requiredAngle; } } [FSA("RequiredAngle")] [SerializeField] private float requiredAngle;
+		[FSA("Angle")]
+		public float RequiredAngle;
 
 		/// <summary>The angle of the arc in degrees that the swipe must be inside.
 		/// -1 = No requirement.
 		/// 90 = Quarter circle (+- 45 degrees).
 		/// 180 = Semicircle (+- 90 degrees).</summary>
-		public float RequiredArc { set { requiredArc = value; } get { return requiredArc; } } [FSA("AngleThreshold")] [FSA("RequiredArc")] [SerializeField] private float requiredArc = -1.0f;
+		[FSA("AngleThreshold")]
+		public float RequiredArc = -1.0f;
 
 		/// <summary>Called on the first frame the conditions are met.</summary>
 		public LeanFingerEvent OnFinger { get { if (onFinger == null) onFinger = new LeanFingerEvent(); return onFinger; } } [FSA("onSwipe")] [FSA("OnSwipe")] [SerializeField] public LeanFingerEvent onFinger;
@@ -47,13 +48,14 @@ namespace Lean.Touch
 		/// <summary>Should the swipe delta be modified before use?
 		/// Normalize = The swipe delta magnitude/length will be set to 1.
 		/// Normalize4 = The swipe delta will be + or - 1 on either the x or y axis.</summary>
-		public ModifyType Modify { set { modify = value; } get { return modify; } } [FSA("Clamp")] [FSA("Modify")] [SerializeField] private ModifyType modify;
+		[FSA("Clamp")]
+		public ModifyType Modify;
 
 		/// <summary>The coordinate space of the OnDelta values.</summary>
-		public CoordinateType Coordinate { set { coordinate = value; } get { return coordinate; } } [FSA("Coordinate")] [SerializeField] private CoordinateType coordinate;
+		public CoordinateType Coordinate;
 
 		/// <summary>The swipe delta will be multiplied by this value.</summary>
-		public float Multiplier { set { multiplier = value; } get { return multiplier; } } [FSA("Multiplier")] [SerializeField] private float multiplier = 1.0f;
+		public float Multiplier = 1.0f;
 
 		/// <summary>Called on the first frame the conditions are met.
 		/// Vector2 = The scaled swipe delta.</summary>
@@ -85,12 +87,12 @@ namespace Lean.Touch
 
 		protected bool AngleIsValid(Vector2 vector)
 		{
-			if (requiredArc >= 0.0f)
+			if (RequiredArc >= 0.0f)
 			{
 				var angle      = Mathf.Atan2(vector.x, vector.y) * Mathf.Rad2Deg;
-				var angleDelta = Mathf.DeltaAngle(angle, requiredAngle);
+				var angleDelta = Mathf.DeltaAngle(angle, RequiredAngle);
 
-				if (angleDelta < requiredArc * -0.5f || angleDelta >= requiredArc * 0.5f)
+				if (angleDelta < RequiredArc * -0.5f || angleDelta >= RequiredArc * 0.5f)
 				{
 					return false;
 				}
@@ -110,13 +112,13 @@ namespace Lean.Touch
 					onFinger.Invoke(finger);
 				}
 
-				switch (coordinate)
+				switch (Coordinate)
 				{
 					case CoordinateType.ScaledPixels:     finalDelta *= LeanTouch.ScalingFactor; break;
 					case CoordinateType.ScreenPercentage: finalDelta *= LeanTouch.ScreenFactor;  break;
 				}
 
-				switch (modify)
+				switch (Modify)
 				{
 					case ModifyType.Normalize:
 					{
@@ -134,7 +136,7 @@ namespace Lean.Touch
 					break;
 				}
 
-				finalDelta *= multiplier;
+				finalDelta *= Multiplier;
 
 				if (onDelta != null)
 				{
@@ -174,30 +176,35 @@ namespace Lean.Touch
 }
 
 #if UNITY_EDITOR
-namespace Lean.Touch.Editor
+namespace Lean.Touch.Inspector
 {
-	using TARGET = LeanSwipeBase;
+	using UnityEditor;
 
-	public abstract class LeanSwipeBase_Editor : LeanEditor
+	public abstract class LeanSwipeBase_Inspector<T> : Lean.Common.LeanInspector<T>
+		where T : LeanSwipeBase
 	{
-		protected override void OnInspector()
+		private bool showUnusedEvents;
+
+		protected override void DrawInspector()
 		{
-			TARGET tgt; TARGET[] tgts; GetTargets(out tgt, out tgts);
+			Draw("RequiredAngle", "The required angle of the swipe in degrees.\n\n0 = Up.\n\n90 = Right.\n\n180 = Down.\n\n270 = Left.");
+			Draw("RequiredArc", "The angle of the arc in degrees that the swipe must be inside.\n\n-1 = No requirement.\n\n90 = Quarter circle (+- 45 degrees).\n\n180 = Semicircle (+- 90 degrees).");
 
-			Draw("requiredAngle", "The required angle of the swipe in degrees.\n\n0 = Up.\n\n90 = Right.\n\n180 = Down.\n\n270 = Left.");
-			Draw("requiredArc", "The angle of the arc in degrees that the swipe must be inside.\n\n-1 = No requirement.\n\n90 = Quarter circle (+- 45 degrees).\n\n180 = Semicircle (+- 90 degrees).");
+			EditorGUILayout.Separator();
 
-			Separator();
+			var usedA = Any(t => t.OnFinger.GetPersistentEventCount() > 0);
+			var usedB = Any(t => t.OnDelta.GetPersistentEventCount() > 0);
+			var usedC = Any(t => t.OnDistance.GetPersistentEventCount() > 0);
+			var usedD = Any(t => t.OnWorldFrom.GetPersistentEventCount() > 0);
+			var usedE = Any(t => t.OnWorldTo.GetPersistentEventCount() > 0);
+			var usedF = Any(t => t.OnWorldDelta.GetPersistentEventCount() > 0);
+			var usedG = Any(t => t.OnWorldFromTo.GetPersistentEventCount() > 0);
 
-			var usedA = Any(tgts, t => t.OnFinger.GetPersistentEventCount() > 0);
-			var usedB = Any(tgts, t => t.OnDelta.GetPersistentEventCount() > 0);
-			var usedC = Any(tgts, t => t.OnDistance.GetPersistentEventCount() > 0);
-			var usedD = Any(tgts, t => t.OnWorldFrom.GetPersistentEventCount() > 0);
-			var usedE = Any(tgts, t => t.OnWorldTo.GetPersistentEventCount() > 0);
-			var usedF = Any(tgts, t => t.OnWorldDelta.GetPersistentEventCount() > 0);
-			var usedG = Any(tgts, t => t.OnWorldFromTo.GetPersistentEventCount() > 0);
+			EditorGUI.BeginDisabledGroup(usedA && usedB && usedC && usedD && usedE && usedF && usedG);
+				showUnusedEvents = EditorGUILayout.Foldout(showUnusedEvents, "Show Unused Events");
+			EditorGUI.EndDisabledGroup();
 
-			var showUnusedEvents = DrawFoldout("Show Unused Events", "Show all events?");
+			EditorGUILayout.Separator();
 
 			if (usedA == true || showUnusedEvents == true)
 			{
@@ -206,9 +213,9 @@ namespace Lean.Touch.Editor
 
 			if (usedB == true || usedC == true || showUnusedEvents == true)
 			{
-				Draw("modify", "Should the swipe delta be modified before use?\n\nNormalize = The swipe delta magnitude/length will be set to 1.\n\nNormalize4 = The swipe delta will be + or - 1 on either the x or y axis.");
-				Draw("coordinate", "The coordinate space of the OnDelta values.");
-				Draw("multiplier", "The swipe delta will be multiplied by this value.");
+				Draw("Modify", "Should the swipe delta be modified before use?\n\nNormalize = The swipe delta magnitude/length will be set to 1.\n\nNormalize4 = The swipe delta will be + or - 1 on either the x or y axis.");
+				Draw("Coordinate", "The coordinate space of the OnDelta values.");
+				Draw("Multiplier", "The swipe delta will be multiplied by this value.");
 			}
 
 			if (usedB == true || showUnusedEvents == true)

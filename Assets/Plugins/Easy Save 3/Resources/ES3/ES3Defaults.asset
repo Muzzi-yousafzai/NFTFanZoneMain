@@ -29,18 +29,12 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-    - Assembly-CSharp
     - Assembly-CSharp-firstpass
-    - LeanCommonPlus
+    - Assembly-CSharp
     - NativeShare.Runtime
     - Siccity.GLTFUtility
-    - LeanTouch
-    - LeanCommon
-    - LeanTouchPlus
-    - Purchasing.Common
     - Dracodec
     - Siccity.GLTFUtility.Editor
-    - Analytics
     - NativeShare.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0

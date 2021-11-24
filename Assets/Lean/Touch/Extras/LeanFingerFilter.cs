@@ -1,14 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Lean.Common;
 
 namespace Lean.Touch
 {
-	/// <summary>This class manages a list of fingers, and can return a filtered version of them based on the criteria you specify. This allows you to quickly implement complex controls involving multiple fingers.
-	/// By default, all fingers seen by LeanTouch are used by this class, but you can set <b>Filter</b> to <b>ManuallyAddedFingers</b>, and you can manually call the <b>AddFinger</b> method to add them yourself.
-	/// NOTE: If you use this class then you must call the <b>UpdateAndGetFingers</b> method every frame/Update to update the class state. This is required because this update method will remove fingers that went up. If you don't call this then they will remain, and this may lead to unexpected behavior.</summary>
+	/// <summary>This struct manages a list of fingers for you, so you can easily handle controls that depend on them.
+	/// The fingers can be added manually with the AddFinger method, or automatically pulled from LeanTouch using the filters you specify.</summary>
 	[System.Serializable]
-	public class LeanFingerFilter
+	public struct LeanFingerFilter
 	{
 		public enum FilterType
 		{
@@ -81,15 +79,18 @@ namespace Lean.Touch
 				{
 					fingers = new List<LeanFinger>();
 				}
-				else
+
+				for (var i = fingers.Count - 1; i >= 0; i--)
 				{
-					for (var i = fingers.Count - 1; i >= 0; i--)
+					if (fingers[i] == finger)
 					{
-						if (fingers[i] == finger)
-						{
-							return;
-						}
+						return;
 					}
+				}
+
+				if (fingers.Count == 0)
+				{
+					LeanTouch.OnFingerUp += RemoveFinger;
 				}
 
 				fingers.Add(finger);
@@ -107,13 +108,18 @@ namespace Lean.Touch
 					{
 						fingers.RemoveAt(i);
 
+						if (fingers.Count == 0)
+						{
+							LeanTouch.OnFingerUp -= RemoveFinger;
+						}
+
 						return;
 					}
 				}
 			}
 		}
 
-		/// <summary>If you've set Filter to ManuallyAddedFingers, then you can call this method to manually remove all fingers.</summary>
+		/// <summary>If you've set Filter to ManuallyAddedFingers, then you can call this method to manually remvoe all fingers.</summary>
 		public void RemoveAllFingers()
 		{
 			if (fingers != null)
@@ -125,10 +131,14 @@ namespace Lean.Touch
 			}
 		}
 
-		/// <summary>This method returns a list of all fingers based on the current settings.
-		/// NOTE: This method must be called every frame/Update.</summary>
-		public List<LeanFinger> UpdateAndGetFingers(bool ignoreUpFingers = false)
+		/// <summary>This method returns a list of all fingers based on the current settings.</summary>
+		public List<LeanFinger> GetFingers(bool ignoreUpFingers = false)
 		{
+			if (fingers == null)
+			{
+				fingers = new List<LeanFinger>();
+			}
+
 			if (filteredFingers == null)
 			{
 				filteredFingers = new List<LeanFinger>();
@@ -138,19 +148,11 @@ namespace Lean.Touch
 
 			if (Filter == FilterType.AllFingers)
 			{
-				filteredFingers.AddRange(LeanSelectableByFinger.GetFingers(IgnoreStartedOverGui, false, 0, RequiredSelectable));
+				filteredFingers.AddRange(LeanSelectable.GetFingers(IgnoreStartedOverGui, false, 0, RequiredSelectable));
 			}
-			else if (fingers != null)
+			else
 			{
 				filteredFingers.AddRange(fingers);
-
-				for (var i = fingers.Count - 1; i >= 0; i--)
-				{
-					if (fingers[i].Up == true)
-					{
-						fingers.RemoveAt(i);
-					}
-				}
 			}
 
 			if (ignoreUpFingers == true)
@@ -170,7 +172,7 @@ namespace Lean.Touch
 				{
 					var mask = 1 << i;
 
-					if ((RequiredMouseButtons & mask) != 0 && LeanInput.GetMousePressed(i) == false)
+					if ((RequiredMouseButtons & mask) != 0 && Lean.Common.LeanInput.GetMousePressed(i) == false)
 					{
 						filteredFingers.Clear();
 					}
@@ -203,7 +205,7 @@ namespace Lean.Touch
 }
 
 #if UNITY_EDITOR
-namespace Lean.Touch.Editor
+namespace Lean.Touch
 {
 	using UnityEditor;
 
