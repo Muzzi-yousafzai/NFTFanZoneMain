@@ -31,6 +31,6 @@ public class test : MonoBehaviour
         cube.GetComponent<LeanTouch>().enabled = true;
         cube.GetComponent<LeanPinchScale>().enabled = true;
         cube.GetComponent<LeanTwistRotate>().enabled = true;
-        print("up");
+        print("up");       
     }
 }

@@ -53,15 +53,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             foreach (var plane in m_ARPlaneManager.trackables)
                 plane.gameObject.SetActive(true);
-            EnableTrackingButton.SetActive(false);
-            DisableTrackingButton.SetActive(true);
+           // EnableTrackingButton.SetActive(false);
+           // DisableTrackingButton.SetActive(true);
         }
         public void DisbleTracking()
         {
             foreach (var plane in m_ARPlaneManager.trackables)
                 plane.gameObject.SetActive(false);
-            DisableTrackingButton.SetActive(false);
-            EnableTrackingButton.SetActive(true);
+           // DisableTrackingButton.SetActive(false);
+           // EnableTrackingButton.SetActive(true);
             
         }
 
@@ -71,8 +71,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             m_RaycastManager = GetComponent<ARRaycastManager>();
             m_ARPlaneManager = GetComponent<ARPlaneManager>();
+            DisbleTracking();
         }
-
+        
         public void SelectModel(int index)
         {
             NewIndex = index;
@@ -82,6 +83,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             animator.SetTrigger("Down");
             Invoke(nameof(TurnAugmentation), 1.0f);
             TakeImageButton.SetActive(false);
+            EnableTracking();
         }
         void TurnAugmentation()
         {
@@ -136,11 +138,13 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     canAugment = false;
                     debugLog.text = "Select Model!";
                     TakeImageButton.SetActive(true);
+                    
                 }
-                if(Input.GetMouseButton(0))
-                {
-                    AddButton.SetActive(false);
-                }
+                
+            }
+            if(Input.GetMouseButton(0))
+            {
+                AddButton.SetActive(false);
             }
         }
         

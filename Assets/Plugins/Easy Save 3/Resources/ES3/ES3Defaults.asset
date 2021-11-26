@@ -31,9 +31,13 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp-firstpass
     - Assembly-CSharp
+    - LeanCommon
+    - LeanTouch
     - NativeShare.Runtime
     - Siccity.GLTFUtility
     - Dracodec
+    - LeanTouchPlus
+    - LeanCommonPlus
     - Siccity.GLTFUtility.Editor
     - NativeShare.Editor
     showAdvancedSettings: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 using Siccity.GLTFUtility;
 using System;
 using UnityEngine.XR.ARFoundation.Samples;
-using Lean.Touch;
+
 
 public class ModelLoader : MonoBehaviour
 {
